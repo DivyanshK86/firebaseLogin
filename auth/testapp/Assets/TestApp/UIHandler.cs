@@ -319,7 +319,7 @@ public class UIHandler : MonoBehaviour {
         .ContinueWith(HandleSignInWithUser);
     }
 
-        GetComponent<managerScript>().errorTxt.text = auth.CurrentUser.UserId;
+        GetComponent<managerScript>().errorTxt.text = "Signing in with : " + auth.CurrentUser.Email;
         GetComponent<UIHandler2>()._CheckIfValid(auth.CurrentUser.UserId);
 
   }

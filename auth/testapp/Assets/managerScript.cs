@@ -21,8 +21,13 @@ public class managerScript : MonoBehaviour {
         //errorTxt.text = s.Token;
         uiHandler.email = s.Email;
         uiHandler.password = "abcd@12345";
-        uiHandler._CreateUserWithEmailAsync();
+		Invoke("makeASignIn",1);
     }
+
+	void makeASignIn()
+	{
+	        uiHandler._CreateUserWithEmailAsync();
+	}
 
     void GoogleErrorCallback(string e)
     {

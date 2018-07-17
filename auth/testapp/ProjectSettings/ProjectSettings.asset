@@ -248,7 +248,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/Lattice Innovations/Desktop/tmp/quickstart-unity-master/quickstart-unity-master/auth/testapp/test.keystore
+  AndroidKeystoreName: C:/Users/DIVYANSH/Desktop/test/firebaseLogin/auth/testapp/test.keystore
   AndroidKeyaliasName: test
   AndroidTVCompatibility: 1
   AndroidIsGame: 1

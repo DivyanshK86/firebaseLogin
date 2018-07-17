@@ -185,11 +185,15 @@ public class UIHandler2 : MonoBehaviour {
     });
   }
 
+  public void _Tester()
+  {
+  	  		DatabaseReference reference = FirebaseDatabase.DefaultInstance.GetReference("Users").Child("sada");
+  }
+
     public void _CheckIfValid(string uid)
     {
-        GetComponent<managerScript>().errorTxt.text = "0";
-        DatabaseReference reference = FirebaseDatabase.DefaultInstance.GetReference("Users").Child(uid);
-        GetComponent<managerScript>().errorTxt.text = "1";
+        DatabaseReference reference = FirebaseDatabase.DefaultInstance.GetReference("Users");//.Child(uid);
+
         reference.GetValueAsync().ContinueWith(task => {
             if (task.IsFaulted) {
                 // Handle the error...
@@ -197,7 +201,7 @@ public class UIHandler2 : MonoBehaviour {
             }
             else if (task.IsCompleted) {
                 DataSnapshot snapshot = task.Result;
-                if(snapshot.Exists)
+                if(snapshot.HasChild(uid))
                 {
                     //acces granted
                     GetComponent<managerScript>().errorTxt.text = "granted";
@@ -209,6 +213,8 @@ public class UIHandler2 : MonoBehaviour {
                 }
             }
         });
+
+		
     }
 /*
   // Render the log output in a scroll view.
