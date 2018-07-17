@@ -385,8 +385,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 595563648}
-        m_MethodName: _SignIn
+      - m_Target: {fileID: 1949985989}
+        m_MethodName: _OnClick_SignIn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
